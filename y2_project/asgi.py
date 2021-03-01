@@ -1,5 +1,5 @@
 """
-ASGI config for y2proj project.
+ASGI config for y2_project project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'y2proj.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'y2_project.settings')
 
 application = get_asgi_application()
