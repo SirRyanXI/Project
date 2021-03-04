@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'accounts',
     'shop',
     'crispy_forms',
+    'search_app',
 
 ]
 
@@ -58,8 +59,9 @@ ROOT_URLCONF = 'y2_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [str(BASE_DIR.joinpath('templates')),
+        'DIRS': [str(BASE_DIR.joinpath('shop','templates')),
                  str(BASE_DIR.joinpath('accounts','templates')),
+                 str(BASE_DIR.joinpath('search_app', 'templates')),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
