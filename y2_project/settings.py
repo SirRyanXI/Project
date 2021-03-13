@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'shop',
     'crispy_forms',
     'search_app',
+    'cart',
 
 ]
 
@@ -62,6 +63,7 @@ TEMPLATES = [
         'DIRS': [str(BASE_DIR.joinpath('shop','templates')),
                  str(BASE_DIR.joinpath('accounts','templates')),
                  str(BASE_DIR.joinpath('search_app', 'templates')),
+                 str(BASE_DIR.joinpath('cart','templates'))
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -71,6 +73,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'shop.context_processors.menu_links',
+                'cart.context_processors.counter',
             ],
         },
     },

@@ -1,4 +1,10 @@
 <nav>
+    {% if item_count > 0 %}
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'cart:cart_detail' %}"><i class="fas fa-shopping-cart"></i>({{item_count}})</a>
+    </li>
+    {% endif %}
+    </li>
     <form class="form-inline my-2 my-lg-0" action="{%url 'search_app:searchResult'%}" method="get">
         {% csrf_token %}
         <input class="form-control mr-sm-2" typse="search" placeholder="Search" aria-label="Search" name="q">
@@ -10,6 +16,6 @@
             <a href = "{{category.get_absolute_url}}"> {{cat.name}}</a>
             <br>
         {% endfor %}
-        <li>Your Cart</li>
+        <li><a href="{% url 'cart:cart_detail' %}">Your Cart</a></li>
     </ul>
 </nav>
