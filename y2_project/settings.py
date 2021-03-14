@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'shop',
     'crispy_forms',
     'search_app',
+    'forums',
 
 ]
 

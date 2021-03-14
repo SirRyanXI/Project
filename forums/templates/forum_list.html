@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Forums{% endblock title %}
+{% block content %}
+  {% for forum in object_list %}
+    <div class="card">
+      <div class="card-header">
+        <span class="font-weight-bold">{{ forum.title }}</span> &middot;
+        <span class="text-muted">by {{ forum.author }} | {{ forum.date }}</span>
+      </div>
+      <div class="card-body">
+        {{ forum.body }}
+      </div>
+      <div class="card-footer text-center text-muted">
+        <a href="{% url 'forum_edit' forum.pk %}">Edit</a> |
+        <a href="{% url 'forum_delete' forum.pk %}">Delete</a>
+      </div>
+
+    </div>
+    <br />
+  {% endfor %}
+{% endblock content %}
