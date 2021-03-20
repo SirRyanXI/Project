@@ -24,5 +24,9 @@ urlpatterns = [
     path('accounts/', include('accounts.urls')),
     path('',include('shop.urls')),
     path('search/', include('search_app.urls')),
+<<<<<<< HEAD
     path('cart/', include('cart.urls')),
+=======
+    path('forums/', include('forums.urls'))
+>>>>>>> cnr
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
