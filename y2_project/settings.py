@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'search_app',
     'cart',
     'stripe',
+    'forums',
 
 ]
 
