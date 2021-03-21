@@ -1,4 +1,4 @@
-# Run this start up commands in the terminal 
+# Run these start up commands in the terminal 
 virtualenv env
 env\scripts\activate
 pip install django
