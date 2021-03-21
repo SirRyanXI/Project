@@ -16,23 +16,22 @@
 {% block content %}
 	<!--Breadcrumb navigation-->
 	{% if category %}
-		<div>
-			<div>
+		<div class="row my_row_class">
+			<div class = "mx-auto">
 				<p><a href="{% url 'shop:allProdCat' %}">Our Product Collection</a> | {{category.name}}</p>
 			</div>
         </div>
     {% endif %}
-	<div>
+	<div class="mx-auto">
 	{% if category %}
-		<img src="{{category.image.url}}" alt="{{category.name}}">
+		<img class="my_image" src="{{category.image.url}}" alt="{{category.name}}">
 	</div>
 	<br>
 	<div>
-		<h1 >{{category.name}}</h1>
-		<p>{{category.description}}</p>
+		<h1 class="text-center my_title">{{category.name}}</h1>
+		<p class="text-justify">{{category.description}}</p>
     </div>
     {% else %}
-		<img src="{% static 'images/banner.jpg' %}" alt="Our Products Collection">
 	</div>
 	<br>
 	<div>
@@ -40,13 +39,13 @@
 		<p>HERE WILL BE A MESSAGE ABOUT OUR PRODUCTS</p>
 	</div>
     {% endif %}
-    <div>
-		<div>
+    <div class="container">
+		<div class="row mx-auto">
 			{% for product in products %}
-				<div>
-					<div>
-						<a href="{{product.get_absolute_url}}"><img src="{{product.image.url}}" alt="{{product.name}}"></a>
-						<div>
+				<div class="my_bottom_margin col-9 col-lg-4 col-sm-12 col-md-4">
+					<div class="card text-center" style="min-width: 18rem;">
+						<a href="{{product.get_absolute_url}}"><img class="card-img-top my_image" src="{{product.image.url}}" alt="{{product.name}}"></a>
+						<div class="card-body">
 							<h4>{{product.name}}</h4>
 							<p>€{{product.price}}</p>
 						</div>
