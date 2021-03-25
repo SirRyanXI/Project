@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'cart',
     'stripe',
     'forums',
-
+    'order',
 ]
 
 MIDDLEWARE = [
@@ -65,8 +65,10 @@ TEMPLATES = [
         'DIRS': [str(BASE_DIR.joinpath('shop','templates')),
                  str(BASE_DIR.joinpath('accounts','templates')),
                  str(BASE_DIR.joinpath('search_app', 'templates')),
-                 str(BASE_DIR.joinpath('cart','templates'))
-        ],
+                 str(BASE_DIR.joinpath('cart','templates')),
+                 str(BASE_DIR.joinpath('order','templates'))
+                
+                ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
