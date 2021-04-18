@@ -106,8 +106,8 @@
     background-color: #f8f9fa!important;
 }
 .custom_image_cart {
-    width: 200px;
-    height: 200px;
+    max-width: 300px;
+    max-height: 400px;
 }
 .custom_a {
     text-decoration: none;
