@@ -9,6 +9,9 @@
 	letter-spacing: .2em;
 	text-transform: uppercase;
 }
+.move_right {
+	float: right;
+}
 
 /****Footer****/
 .my_footer {
@@ -152,4 +155,14 @@
 	text-transform: uppercase;
 	letter-spacing: .2em;
 	font-size: 12px;
+}
+
+/**** Carousel ****/
+
+.custom_carousel_image{
+    max-width: 200px;
+    max-height: 400px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
