@@ -14,6 +14,7 @@ urlpatterns = [
         ForumDetailView.as_view(), name='forum_detail'),
     path('<int:pk>/delete/',
         ForumDeleteView.as_view(), name='forum_delete'),
-    path('new/', ForumCreateView.as_view(), name='forum_new'),
+    path('new/',
+        ForumCreateView.as_view(), name='forum_new'),
     path('', ForumListView.as_view(), name='forum_list'),
 ]
