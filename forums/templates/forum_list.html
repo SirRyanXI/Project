@@ -2,7 +2,7 @@
 {% block title %}forums{% endblock title %}
 {% block content %}
 {% if user.is_authenticated %}
-  <div class="card-footer text-center text-muted"><a href="{% url 'forum_new' %}">+New</a>
+  <div class="card-footer text-center text-muted"><a href="{% url 'forum_new' %}" class = "btn btn-primary">+New</a>
   </div>
   {% endif %}
   {% for forum in object_list %}
@@ -16,8 +16,8 @@
       </div>
       {% if user.is_authenticated %}
       <div class="card-footer text-center text-muted">
-        <a href="{% url 'forum_edit' forum.pk %}">Edit</a>
-        <a href="{% url 'forum_delete' forum.pk %}">Delete</a>
+        <a href="{% url 'forum_edit' forum.pk %}" class = "btn btn-warning">Edit</a>
+        <a href="{% url 'forum_delete' forum.pk %}" class = "btn btn-danger">Delete</a>
       </div>
       {% endif %}
     </div>
