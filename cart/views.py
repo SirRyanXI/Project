@@ -125,7 +125,7 @@ def cart_detail(request, total=0, counter=0, cart_items=None):
                         order = order_details)
                     if voucher != None:
                         discount = (oi.price*(voucher.discount/Decimal('100')))
-                        oi.price = (i.price - discount)
+                        oi.price = (oi.price - discount)
                     else:
                         oi.price = oi.price*oi.quantity
                     oi.save()
